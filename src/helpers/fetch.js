@@ -12,7 +12,8 @@ export const fetchSinToken = async( endpoint, data, method = 'GET') => {
         const resp = await fetch( url, {
             method,
             headers:{
-                'Content-type': 'application/json'
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
             },
             body: JSON.stringify(data)
         })
@@ -40,7 +41,8 @@ export const fetchConToken = async( endpoint, data, method = 'GET') => {
         const resp = await fetch( url, {
             method,
             headers:{
-                'Content-type': 'application/json',
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
                 'x-token': token
             },
             body: JSON.stringify(data)
